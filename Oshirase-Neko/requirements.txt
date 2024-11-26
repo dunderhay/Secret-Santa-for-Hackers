@@ -1,0 +1,7 @@
+certifi
+charset-normalizer
+idna
+pyserial
+PySocks
+requests
+urllib3
