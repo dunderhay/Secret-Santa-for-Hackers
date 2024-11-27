@@ -2,6 +2,8 @@
 
 "Oshirase Neko" (Cat Notifier) is a custom notification device that combines the iconic Maneki Neko (beckoning cat) with an ESP32. When the cat waves its paw, it indicates the detection of a potential Server-Side Request Forgery (SSRF) vulnerability. However, as not all SSRF vulnerabilities are exploitable, the beckoning cat adds a touch of good fortune, reminding you that luck plays a role when looking for bugs.
 
+![meow](images/meow.jpg)
+
 # Setup
 
 ## Step 1: Configure Burp Collaborator
@@ -97,5 +99,4 @@ Remember that you need to use the Collaborator payload that was given as an outp
 
 You can watch the video of Oshirase Neko in action here: 
 
-[![Video](https://img.youtube.com/vi/eBev7EduBZg/0.jpg)]([https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=eBev7EduBZg))
-
+[![Watch the video](https://img.youtube.com/vi/eBev7EduBZg/0.jpg)](https://www.youtube.com/watch?v=eBev7EduBZg)
