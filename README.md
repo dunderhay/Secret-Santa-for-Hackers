@@ -2,6 +2,10 @@
 
 Repo for the Secret Santa gifts I've made over the years.
 
+- [2025: Gnomify](/gnomify)
+
+  <img src="/gnomify/images/gnomify-wizard.jpg" width="30%" height="30%" />
+
 - [2024: Oshirase Neko](/Oshirase-Neko)
 
   <img src="/Oshirase-Neko/images/meow.jpg" width="30%" height="30%" />
