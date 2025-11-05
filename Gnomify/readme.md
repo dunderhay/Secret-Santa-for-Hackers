@@ -1,6 +1,6 @@
 # 🧙‍♂️ Gnomify – The Hardware Notification Wizard
 
-![gnomify-wizard](images/gnomify-wizard.jpg)
+<img src="images/gnomify-wizard.jpg" width="50%" height="50%" />
 
 A Wi-Fi-connected terminal wizard whose mystical orb breathes colour to show the state of your work.
 
