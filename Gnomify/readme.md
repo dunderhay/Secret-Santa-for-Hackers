@@ -1,18 +1,16 @@
-# 🧙‍♂️ Gnomify – The Hardware Notification Wizard
+# 🧙‍♂️ Gnomify – The Hardware Notification Wizard 
 
 <img src="images/gnomify-wizard.jpg" width="50%" height="50%" />
 
-A Wi-Fi-connected terminal wizard whose mystical orb breathes colour to show the state of your work.
+A Wi-Fi-connected desktop companion that uses light to show the state of your terminal job. Gnomify is a physical notifier inspired by ntfy.sh, but built in hardware.
 
-Perched beside your keyboard, the wizard raises an orb that pulses to indicate whether your port scan or other command line job has succeeded, failed, or is still running.
+Perched beside your keyboard, the wizard raises an orb that pulses as your commands run — shifting color to show when a scan or other terminal job is in progress, complete, or has failed.
 
-When you start a long job like `ffuf`, `nmap`, or `nuclei` — the wizard's orb pulses through colours to reflect the task's status.
-
-Gnomify runs on an ESP32-C3 SuperMini and a simple RGB LED —  inspired by `ntfy.sh` but in hardware.
+Whether it's `ffuf`, `nmap`, `nuclei`, or any other command-line tool, Gnomify shows you what’s happening at a glance.
 
 ---
 
-## 📶 First Boot & Setup
+## First Boot & Setup
 
 On first boot, the wizard conjures an AP for provisioning.
 
@@ -32,7 +30,7 @@ When online, the wizard's orb breathes **cyan** to indicate a healthy WiFi conne
 
 ---
 
-## 🔮 State Reference
+## 🔮 Orb State Reference
 
 Each colour of the wizard's orb conveys a different state:
 
@@ -48,7 +46,7 @@ Each colour of the wizard's orb conveys a different state:
 
 ---
 
-## 🌐 API Reference
+## API Reference
 
 ### 1. Send Event — set the orb state
 
@@ -91,7 +89,7 @@ curl "http://gnomify.local/"
 
 ---
 
-## 🐚 Command-Line Wrapper
+## Command-Line Wrapper
 
 Use `gnomify.sh` (included) or create your own wrapper to notify the wizard around arbitrary commands.
 
@@ -141,7 +139,7 @@ On next boot the wizard will reopen the `Gnomify-Setup` portal.
 
 ---
 
-## 🧠 Development
+## Development
 
 1. Clone the repo and open it in **PlatformIO**.
 2. Adjust configuration in `src/main.cpp` if needed (pins, defaults).
