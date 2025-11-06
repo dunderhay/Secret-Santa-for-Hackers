@@ -126,15 +126,11 @@ fi
 
 ---
 
-## Reset / Reconfigure
+## Reset WiFi Credentials
 
-Erase saved Wi-Fi credentials and NVS data (factory reset):
+To erase saved Wi-Fi credentials and NVS data (factory reset), **press and hold the white button for 5 seconds**.
 
-```bash
-pio run -t erase
-```
-
-You'll need to flash the device with the firmware again.
+The button is located inside the wizard.
 
 ---
 

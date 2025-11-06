@@ -15,6 +15,9 @@ static const char* MDNS_NAME     = "gnomify";
 #define PIN_B 2   // Blue
 #define COMMON_ANODE false
 
+#define FACTORY_RESET_PIN 9
+#define FACTORY_RESET_HOLD_MS 5000
+
 #define LEDC_FREQ_HZ  1000
 #define LEDC_RES_BITS 10
 const unsigned long BREATH_PERIOD_MS = 4000;
@@ -183,6 +186,30 @@ void handleState() {
   server.send(200, "application/json", json);
 }
 
+// ---------- Factory Reset -----------------
+void checkFactoryReset() {
+  pinMode(FACTORY_RESET_PIN, INPUT_PULLUP);
+  unsigned long pressStart = 0;
+
+  if (digitalRead(FACTORY_RESET_PIN) == LOW) {
+    pressStart = millis();
+    Serial.println("[Reset] Button pressed... hold to confirm");
+    while (digitalRead(FACTORY_RESET_PIN) == LOW) {
+      delay(100);
+      if (millis() - pressStart >= FACTORY_RESET_HOLD_MS) {
+        Serial.println("[Reset] Factory reset confirmed");
+        WiFi.disconnect(true, true); // erase Wi-Fi creds
+        prefs.begin("gnomify", false);
+        prefs.clear();               // clear API token
+        prefs.end();
+        delay(200);
+        ESP.restart();
+      }
+    }
+    Serial.println("[Reset] Button released before timeout (cancelled)");
+  }
+}
+
 // -------------- SETUP/LOOP ----------------
 void setup() {
   Serial.begin(115200);
@@ -194,6 +221,8 @@ void setup() {
   ledcAttachPin(PIN_R, 0);
   ledcAttachPin(PIN_G, 1);
   ledcAttachPin(PIN_B, 2);
+
+  
 
   Serial.println("[Init] Gnomify starting...");
   startWiFi();
@@ -218,4 +247,5 @@ void loop() {
   }
 
   render(breathe());
+  checkFactoryReset();
 }
