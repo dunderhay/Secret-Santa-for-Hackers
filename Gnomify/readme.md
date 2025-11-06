@@ -4,7 +4,7 @@
 
 A Wi-Fi-connected desktop companion that uses light to show the state of your terminal job. Gnomify is a physical notifier inspired by ntfy.sh, but built in hardware.
 
-Perched beside your keyboard, the wizard raises an orb that pulses as your commands run — shifting color to show when a scan or other terminal job is in progress, complete, or has failed.
+Perched beside your keyboard, the wizard raises an orb that pulses as your commands run — shifting colour to show when a scan or other terminal job is in progress, complete, or has failed.
 
 Whether it's `ffuf`, `nmap`, `nuclei`, or any other command-line tool, Gnomify shows you what’s happening at a glance.
 
@@ -79,7 +79,6 @@ Example response:
 }
 ```
 
-> `state` is an integer corresponding to the internal enum; use the API or the README table to map it to a name.
 
 ### 3. Root help page
 
@@ -127,7 +126,7 @@ fi
 
 ---
 
-## 🧹 Reset / Reconfigure
+## Reset / Reconfigure
 
 Erase saved Wi-Fi credentials and NVS data (factory reset):
 
@@ -135,7 +134,7 @@ Erase saved Wi-Fi credentials and NVS data (factory reset):
 pio run -t erase
 ```
 
-On next boot the wizard will reopen the `Gnomify-Setup` portal.
+You'll need to flash the device with the firmware again.
 
 ---
 
